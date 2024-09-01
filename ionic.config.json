@@ -1,0 +1,7 @@
+{
+  "name": "synerdoc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

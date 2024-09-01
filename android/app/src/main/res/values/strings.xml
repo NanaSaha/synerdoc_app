@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">synerdoc</string>
+    <string name="title_activity_main">synerdoc</string>
+    <string name="package_name">com.synerdoc</string>
+    <string name="custom_url_scheme">com.synerdoc</string>
+</resources>

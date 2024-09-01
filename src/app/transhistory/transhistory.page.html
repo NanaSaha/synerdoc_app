@@ -1,0 +1,375 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+
+    Service Note
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="main-sec">
+
+    <ion-searchbar placeholder="Search Name / Service"></ion-searchbar>
+
+
+
+
+    <ion-segment [(ngModel)]="mySegment" (ionChange)="segmentChanged()">
+      <ion-segment-button value="travelrequest">
+      
+
+  <ion-badge slot="start">11</ion-badge>
+  <ion-label>Active</ion-label>
+
+      </ion-segment-button>
+      <ion-segment-button value="approverequest">
+        Today <ion-badge slot="end" style="background-color: #EA580C;">10</ion-badge>
+      </ion-segment-button>
+      <ion-segment-button value="approveexception">
+        Active <ion-badge slot="end" style="background-color: #EA580C;">10</ion-badge>
+      </ion-segment-button>
+    </ion-segment>
+
+
+    <div [ngSwitch]="mySegment">
+
+
+      <div *ngSwitchCase="'travelrequest'">
+
+        <div class="schedulecontainer">
+          <h4 style="font-size: 10px">25 Sept 24</h4>
+          <div class="schedulecontainer2">
+            <img src="../assets/img/anita.png">
+            <div class="text-content">
+
+              <h4 class="headFontTrans">Anita Shades</h4>
+              <p class="subFontTrans">1111 South Long Ave Hillside NJ 07205</p>
+            </div>
+            <p class="headFontTrans"><ion-badge slot="start" style="background-color: #EA580C;">HHA</ion-badge></p>
+          </div>
+        </div>
+
+
+        <div class="schedulecontainer">
+          <h4 style="font-size: 10px">16 Sept 24</h4>
+          <div class="schedulecontainer2">
+            <img src="../assets/img/anita2.png">
+            <div class="text-content">
+
+              <h4 class="headFontTrans">Michael Apalolo</h4>
+              <p class="subFontTrans">Dzorwulu Airport Area</p>
+            </div>
+            <p class="headFontTrans"><ion-badge slot="start" style="background-color: #EA580C;">SN</ion-badge></p>
+          </div>
+        </div>
+
+        <div class="schedulecontainer">
+          <h4 style="font-size: 10px">16 Sept 24</h4>
+          <div class="schedulecontainer2">
+            <img src="../assets/img/anita3.png">
+            <div class="text-content">
+
+              <h4 class="headFontTrans">Kofi Peprah</h4>
+              <p class="subFontTrans">Dzorwulu Airport Area</p>
+            </div>
+            <p class="headFontTrans"><ion-badge slot="start" style="background-color: #EA580C;">PA</ion-badge></p>
+          </div>
+        </div>
+
+        <div class="schedulecontainer">
+          <h4 style="font-size: 10px">25 Sept 24</h4>
+          <div class="schedulecontainer2">
+            <img src="../assets/img/anita.png">
+            <div class="text-content">
+
+              <h4 class="headFontTrans">Anita Shades</h4>
+              <p class="subFontTrans">1111 South Long Ave Hillside NJ 07205</p>
+            </div>
+            <p class="headFontTrans"><ion-badge slot="start" style="background-color: #EA580C;">HHA</ion-badge></p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'approverequest'">
+
+        <div>
+          <p style="text-align: center; color: #224d0e;margin-top: 20%;">You have no service notes today
+          </p>
+        </div>
+
+      </div>
+
+      <div *ngSwitchCase="'approveexception'">
+        <div>
+          <p style="text-align: center; color: #224d0e;margin-top: 20%;">You have no active service notes
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</ion-content>
+
+<!-- 
+
+
+
+
+
+
+
+<ion-segment [(ngModel)]="mySegment" (ionChange)="segmentChanged()">
+  <ion-segment-button value="travelrequest">
+      Pending
+  </ion-segment-button>
+  <ion-segment-button value="approverequest">
+      Joined
+  </ion-segment-button>
+  <ion-segment-button value="approveexception">
+     History
+  </ion-segment-button>
+</ion-segment>
+
+
+<div [ngSwitch]="mySegment">
+
+
+  <div *ngSwitchCase="'travelrequest'">
+    <div *ngIf="resp_code_pending == '101'">
+      <div class="">
+        <img src="../assets/img/frame.png" class="crossImg">
+      </div>
+      
+      
+      <div>
+      <p style="text-align: center; color: #224d0e;">You have no ongoing transactions. Hit New Transaction to get started, or Join Transaction to see pending ones.
+      </p>
+      </div>
+      </div>
+
+
+      <div *ngIf="resp_code_pending != '101'">
+        <div class="itemized" *ngFor="let item of trans_list_pending">
+          <ion-row>
+            <ion-col size="9">
+              <h3 style="font-weight: 800;" class="left-textHeader" >{{item.item_name}}</h3>  
+            </ion-col>
+      
+            <ion-col size="3"  *ngIf="item.status == 'pending'">
+              <span class="right-Img"> <img src="../assets/img/recieve2.png"></span>
+            </ion-col>
+      
+          
+      
+            <ion-col size="6">
+              <span class="left-text" >Person’s name</span>  
+            </ion-col>
+      
+            <ion-col size="6">
+              <span class="right-text">{{item.person_name}}</span>
+            </ion-col>
+      
+            <ion-col size="6">
+              <span class="left-text" >Quatity</span>  
+            </ion-col>
+      
+            <ion-col size="6">
+              <span class="right-text">{{item.item_quantity}}</span>
+            </ion-col>
+            <ion-col size="6">
+              <span class="left-text" >Amount</span>  
+            </ion-col>
+      
+            <ion-col size="6">
+              <span class="right-text">GHS{{item.amount}}.00</span>
+            </ion-col>
+            <ion-col size="6">
+              <span class="left-text" >Date</span>  
+            </ion-col>
+      
+            <ion-col size="6">
+              <span class="right-text">{{item.created_at | date: 'mediumDate'}}</span>
+            </ion-col>
+          
+          </ion-row>
+          <hr style="border-width: 1px; color: #E8EEEE">
+      
+          <ion-row>
+          <ion-col size="9">
+            <span class="left-text">Transaction Progress</span>
+          </ion-col>
+          <ion-col size="3">
+             
+          </ion-col>
+        
+        </ion-row>
+          <ion-progress-bar value=".45">
+         
+          </ion-progress-bar>
+      
+          <div style="padding-top: 4%">
+        
+
+            <angular4-paystack [key]="'pk_live_caabde47a485606dc025e27220d3c03548aa40f2'" [email]="person_email"
+            [amount]="item.amount * item.item_quantity  * 100" [ref]="random_id"  [channels]="channels" [currency]="'GHS'"
+            [class]="'payment'" (close)="paymentCancel()" (callback)="paymentDone($event)">Pay with Mobile
+            Money/Card</angular4-paystack>
+          </div>
+        </div>
+      
+      </div>
+</div>
+
+<ion-list *ngSwitchCase="'approverequest'">
+  <div *ngIf="resp_code_joined != '101' || trans_list_joined.length > 0">
+  <div class="itemized" *ngFor="let item of trans_list_joined">
+    <ion-row>
+      <ion-col size="9">
+        <h3 style="font-weight: 800;" class="left-textHeader" >{{item.item_name}}</h3>  
+      </ion-col>
+
+      <ion-col size="3"  *ngIf="item.status == 'pending'">
+        <span class="right-Img"> <img src="../assets/img/recieve2.png"></span>
+      </ion-col>
+
+      <ion-col size="3"  *ngIf="item.status != 'pending'">
+        <span class="right-Img"> <img src="../assets/img/receive.png"></span>
+      </ion-col>
+
+      <ion-col size="6">
+        <span class="left-text" >Person’s name</span>  
+      </ion-col>
+
+      <ion-col size="6">
+        <span class="right-text">{{item.person_name}}</span>
+      </ion-col>
+
+      <ion-col size="6">
+        <span class="left-text" >Quatity</span>  
+      </ion-col>
+
+      <ion-col size="6">
+        <span class="right-text">{{item.item_quantity}}</span>
+      </ion-col>
+      <ion-col size="6">
+        <span class="left-text" >Amount</span>  
+      </ion-col>
+
+      <ion-col size="6">
+        <span class="right-text">GHS{{item.amount}}.00</span>
+      </ion-col>
+      <ion-col size="6">
+        <span class="left-text" >Date</span>  
+      </ion-col>
+
+      <ion-col size="6">
+        <span class="right-text">{{item.created_at | date: 'mediumDate'}}</span>
+      </ion-col>
+    
+    </ion-row>
+    <hr style="border-width: 1px; color: #E8EEEE">
+
+    <ion-row>
+    <ion-col size="9">
+      <span class="left-text">Transaction Progress</span>
+    </ion-col>
+    <ion-col size="3">
+        
+    </ion-col>
+  
+  </ion-row>
+    <ion-progress-bar value=".45">
+     
+    </ion-progress-bar>
+
+ 
+  </div>
+
+</div>
+
+<div *ngIf="resp_code_joined == '101' || trans_list_joined.length == '0'">
+<div class="">
+  <img src="../assets/img/frame.png" class="crossImg">
+</div>
+
+
+<div>
+<p style="text-align: center; color: #224d0e;">You have no ongoing transactions. Hit New Transaction to get started, or Join Transaction to see pending ones.
+</p>
+</div>
+</div>
+ 
+</ion-list>
+
+<div *ngSwitchCase="'approveexception'">
+  <div *ngIf="resp_code != '101'">
+  <div class="itemizedHis">
+
+
+
+
+    <div class="container" *ngFor="let item of trans_list">
+
+    <div *ngIf="item.status != 'pending'" class="container">
+      <img src="../assets/img/incoming.png">
+      <div class="text-content">
+      
+        <h4 class="headFontTrans">{{item.item_name}}</h4>
+        <p class="subFontTrans">Payment received on {{item.created_at | date: 'mediumDate'}}</p>
+      </div>
+
+      
+    </div>
+
+    <div *ngIf="item.status == 'pending'" class="container">
+      <img src="../assets/img/money.png">
+      <div class="text-content">
+      
+        <h4 class="headFontTrans">{{item.item_name}}</h4>
+        <p class="subFontTrans">Money sent on {{item.created_at | date: 'mediumDate'}}</p>
+      </div>
+    </div>
+
+   
+      
+    </div>
+
+    <hr style="border-width: 1px;">
+   
+    
+  
+  </div> 
+</div> 
+
+<div *ngIf="resp_code == '101'">
+  <div class="">
+    <img src="../assets/img/frame.png" class="crossImg">
+  </div>
+  
+  
+  <div>
+  <p style="text-align: center; color: #224d0e;">You have no ongoing transactions. Hit New Transaction to get started, or Join Transaction to see pending ones.
+  </p>
+  </div>
+  </div>
+ 
+
+
+
+
+ 
+
+
+
+</div>
+
+</div>
+
+
+</ion-content> -->

@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+
+   Patient Details
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="main-sec">
+
+  
+    <div class="noschedulecontainer">
+    
+      <div class="schedulecontainer2">
+        <img src="../assets/img/anita3.png">
+        <div class="text-content">
+    
+          <h4 class="headFontTrans">Kofi Peprah</h4>
+          <p class="subFontTrans">Dzorwulu Airport Area</p>
+        </div>
+       
+      </div>
+    </div>
+
+      <ion-row>
+        <ion-button  >
+          End Driving</ion-button>
+        <ion-col size="6">
+          <ion-button class="whitee_g" (click)="getDirection()"> 
+               Get Direction</ion-button>
+        </ion-col>
+      
+        <ion-col size="6">
+          <ion-button class="whitee_g" > Service Note</ion-button>
+        </ion-col>
+      
+      </ion-row>
+
+
+   
+        <ion-row style="padding-top: 5%;">
+          <ion-col size="6">
+            <h4 style="font-size: 12px;padding-left: 5%;">Latest Service</h4>
+          </ion-col>
+       
+        
+        </ion-row>
+        <div class="schedulecontainer">
+          
+         
+
+          <ion-row style="padding-top: 5%;">
+            <ion-col size="6">
+            <h4 style="font-size: 10px">25 Sept 24</h4>
+            </ion-col>
+          
+            <ion-col size="6">
+              <h4 style="font-size: 10px;float: right">4:34pm</h4>
+            </ion-col>
+          
+          </ion-row>
+
+
+          <div class="schedulecontainer2">
+           
+            <div class="text-content">
+              <h4 class="headFontTrans">SN - Skilled Nurse</h4>
+            
+            </div>
+
+          </div>
+
+            <div class="statusSt">
+              Status <ion-badge slot="start" style="background-color: #EA580C;">Verified</ion-badge> <ion-badge slot="start"
+                style="background-color: #EA580C;">Approved</ion-badge> <ion-badge slot="start" style="background-color: #FFE9DD;color: rgb(36, 36, 36)">Unverified</ion-badge> <ion-badge slot="start" style="background-color: #FFE9DD;color: rgb(36, 36, 36)">Pending</ion-badge>
+            </div>
+        </div>
+
+
+
+
+          <ion-row style="padding-top: 10%;">
+            <ion-col size="6">
+              <h4 style="font-size: 12px;padding-left: 5%;">Sept 2024</h4>
+            </ion-col>
+          
+            <ion-col size="6">
+             
+              <!-- <ion-datetime-button datetime="datetime"></ion-datetime-button>
+              
+              <ion-modal [keepContentsMounted]="true">
+                <ng-template>
+                  <ion-datetime id="datetime"></ion-datetime>
+                </ng-template>
+              </ion-modal> -->
+            </ion-col>
+          
+          </ion-row>
+
+          <div class="schedulecontainer">
+            <h4 style="font-size: 10px">25 Sept 24</h4>
+            <div class="schedulecontainer2">
+              <img src="../assets/img/anita.png">
+              <div class="text-content">
+          
+                <h4 class="headFontTrans">Anita Shades</h4>
+                <p class="subFontTrans">1111 South Long Ave Hillside NJ 07205</p>
+              </div>
+              <p class="headFontTrans"><ion-badge slot="start" style="background-color: #EA580C;">HHA</ion-badge></p>
+            </div>
+          </div>
+          
+          
+          <div class="schedulecontainer">
+            <h4 style="font-size: 10px">16 Sept 24</h4>
+            <div class="schedulecontainer2">
+              <img src="../assets/img/anita2.png">
+              <div class="text-content">
+          
+                <h4 class="headFontTrans">Michael Apalolo</h4>
+                <p class="subFontTrans">Dzorwulu Airport Area</p>
+              </div>
+              <p class="headFontTrans"><ion-badge slot="start" style="background-color: #EA580C;">SN</ion-badge></p>
+            </div>
+          </div>
+          
+          <div class="schedulecontainer">
+            <h4 style="font-size: 10px">16 Sept 24</h4>
+            <div class="schedulecontainer2">
+              <img src="../assets/img/anita3.png">
+              <div class="text-content">
+          
+                <h4 class="headFontTrans">Kofi Peprah</h4>
+                <p class="subFontTrans">Dzorwulu Airport Area</p>
+              </div>
+              <p class="headFontTrans"><ion-badge slot="start" style="background-color: #EA580C;">PA</ion-badge></p>
+            </div>
+          </div>
+
+
+      </div>
+
+</ion-content>

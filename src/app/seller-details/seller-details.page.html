@@ -1,0 +1,172 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+
+    <ion-row>
+      <ion-col size="3">
+
+
+
+      </ion-col>
+      <ion-col size="9">
+
+        <ion-row style="font-size: 10px;">
+          <ion-col size="3" (click)="save()">
+            Save
+          </ion-col>
+          <ion-col size="3" (click)="save()">
+            Delete
+          </ion-col>
+          <ion-col size="3" (click)="save()">
+            Complete
+          </ion-col>
+          <ion-col size="3" (click)="save()">
+            Upload
+          </ion-col>
+        </ion-row>
+      </ion-col>
+     
+     
+    
+    </ion-row>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="direct_service_row2">
+    <div class="c3">
+     
+
+      <div class="schedulecontainer">
+
+        <div class="schedulecontainer2">
+
+          <div class="text-content">
+            <h4 style="font-size: 10px; text-align: left;">25 Sept 24</h4>
+            <h4 class="headFontTrans">Anita Shades</h4>
+            <p class="subFontTrans">HHA-Hourly | Home Health Aide Visit (8E86) 07205</p>
+          </div>
+          <p class="headFontTrans"><ion-badge slot="start" style="background-color: #ffffff;
+    color: black;">HHA</ion-badge></p>
+        </div>
+      </div>
+
+
+      <div class="schedulecontainer">
+
+        <div class="schedulecontainer2">
+
+          <div class="text-content">
+            <h4 style="font-size: 10px; text-align: left;">Section: Tap below to select</h4>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <ion-item>
+        <ion-select label="Floating label" label-placement="floating">
+          <ion-select-option value="apple">Care Need Task - Fall Risk</ion-select-option>
+          <ion-select-option value="banana">Patient Header</ion-select-option>
+          <ion-select-option value="orange">Narrative</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </div>
+  </div>
+
+
+
+  <div class="direct_service_row2">
+    <div class="c4">
+  
+  
+      <div class="schedulecontainerb">
+  
+        <div class="schedulecontainer2">
+  
+          <div class="text-content">
+            <h4 style="font-size: 10px; text-align: left;">Associate</h4>
+            <h4 class="headFontTrans">Heidy Grace</h4>
+           
+          </div>
+          
+        </div>
+      </div>
+      <hr>
+
+        <div class="schedulecontainerb">
+        
+          <div class="schedulecontainer2">
+        
+            <div class="text-content">
+              <h4 style="font-size: 10px; text-align: left;">Associate Discipline</h4>
+              <h4 class="headFontTrans">Home Health Aide</h4>
+             
+            </div>
+        
+          </div>
+        </div>
+  
+    </div>
+  </div>
+
+
+
+
+  <div class="direct_service_row2">
+    <div class="c4">
+  
+  
+      <div class="schedulecontainerb">
+  
+        <div class="schedulecontainer2">
+  
+          <div class="text-content">
+            <h4 style="font-size: 10px; text-align: left;">Actual Time In </h4>
+            <h4 class="headFontTrans">Time<ion-datetime-button datetime="datetime"></ion-datetime-button>
+            
+              <ion-modal [keepContentsMounted]="true">
+                <ng-template>
+                  <ion-datetime id="datetime"></ion-datetime>
+                </ng-template>
+              </ion-modal>
+            </h4>
+  
+          </div>
+  
+        </div>
+      </div>
+      <hr>
+  
+      <div class="schedulecontainerb">
+  
+        <div class="schedulecontainer2">
+  
+          <div class="text-content">
+            <h4 style="font-size: 10px; text-align: left;">Actual Time Out</h4>
+            <h4 class="headFontTrans">Time <ion-datetime-button datetime="datetime"></ion-datetime-button>
+            
+            <ion-modal [keepContentsMounted]="true">
+              <ng-template>
+                <ion-datetime id="datetime"></ion-datetime>
+              </ng-template>
+            </ion-modal></h4>
+  
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+
+
+</ion-content>

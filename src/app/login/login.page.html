@@ -1,0 +1,53 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+
+      <div>
+        <img src="../assets/img/main.jpg" class="moveRight">
+      </div>
+  
+  </ion-toolbar>
+</ion-header>
+
+  
+  <ion-content>
+    <div class="text-container">
+      <h3 class="headerFont">Sign In
+    
+      </h3>
+      <p class="subFonts">By using service you are agreeing to our <span style="color: #F25022">Terms and Privacy Statement.</span></p>
+    </div>
+
+        <form [formGroup]="loginForm" >
+
+          <ion-item fill="outline" class="moveCenter">
+          
+            <ion-input placeholder="Username" formControlName="userName"></ion-input>
+          </ion-item>
+         
+          <br>
+        
+        <ion-item fill="outline"  class="moveCenter">
+     
+          <ion-input type="password"  placeholder="Password" formControlName="password"></ion-input>
+        </ion-item>
+      
+<!--       
+        <div class="btnsTxt">
+           
+            <ion-button (click)="login()" [disabled]="!this.loginForm.valid">Login</ion-button>
+        </div> -->
+
+        <div class="btnsTxt">
+        
+          <ion-button (click)="login()" >Login</ion-button>
+        </div>
+        </form>
+
+          <p style="text-align: center;margin: 20px 20px 10px 20px;color: #F25022;">Forgot Password? </p>
+    </ion-content>

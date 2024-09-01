@@ -1,0 +1,73 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+
+    <img src="../assets/img/synerdocLogo.png" style="padding-right: 5%;float: right">
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+  
+  <ion-content style="background-color: #f6f6f6">
+      <div class="main-sec">
+      
+        <div class="notblock">
+      
+      
+          <img src="../assets/img/profIcon.svg" width="100%">
+      
+      
+      
+          <div class="text-content">
+      
+            <h4 class="headFontTrans">Heidy Grace</h4>
+            <p class="subFontTrans">SN - Skilled Nurse</p>
+          </div>
+      
+        </div>
+      </div>
+
+
+        <form  [formGroup]="signupForm" >
+            <ion-item fill="outline" class="moveCenter">
+            
+              <ion-input placeholder="Organization ID" formControlName="fullname" [value]="fullname"></ion-input>
+            </ion-item>
+            <br>
+
+          <ion-item fill="outline" class="moveCenter">
+           
+            <ion-input placeholder="Name"  formControlName="fullname" [value]="fullname" ></ion-input>
+          </ion-item>
+          <br>
+        
+        <ion-item fill="outline"  class="moveCenter">
+     
+          <ion-input type="email"  placeholder="Password" formControlName="email" [value]="this.email" ></ion-input>
+        </ion-item>
+
+        <br>
+
+          <ion-item fill="outline" class="moveCenter">
+          
+            <ion-input type="email" placeholder="Organization" formControlName="email" [value]="this.email"></ion-input>
+          </ion-item>
+          
+          <br>
+        
+        <ion-item fill="outline"  class="moveCenter">
+     
+          <ion-input placeholder="Phone Number" formControlName="phone"  [value]="phone" ></ion-input>
+        </ion-item>
+       
+        <div class="btnsTxt">
+                    <ion-button>Save Changes</ion-button>
+        </div>
+        </form>
+    </ion-content>
